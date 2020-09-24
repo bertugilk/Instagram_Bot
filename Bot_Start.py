@@ -1,0 +1,35 @@
+from tkinter import *
+import time
+
+def Bot_Start():
+    screen=Tk()
+    def getModül():
+        screen.destroy()
+        import Instagram_Main
+        time.sleep(3)
+        ins = Instagram_Main.Main()
+        time.sleep(3)
+        ins.Login()
+        time.sleep(3)
+        ins.Home_Page()
+        time.sleep(3)
+        ins.DirectMessage_Page()
+        time.sleep(5)
+        ins.Discover_Page()
+        time.sleep(5)
+        ins.mePage()
+        time.sleep(3)
+        ins.followers()
+        time.sleep(3)
+        ins.Logout()
+        time.sleep(3)
+        ins.browser.quit()
+    screen.option_add('*font', ('Showcard Gothic', 35, 'bold'))
+    screen.title("START BOT SCREEN")
+    screen.geometry("350x150+500+300")
+    screen.resizable(False,False)
+    icon=PhotoImage(file='C:/Users/bertug/PycharmProjects/Instagram_Bot/Images/instagram2.png')
+    screen.iconphoto(False,icon)
+    startButton=Button(text="START BOT",bg="medium spring green",width=40,height=8,command=getModül)
+    startButton.pack(side="top",fill=BOTH, expand=1)
+    mainloop()
